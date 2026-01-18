@@ -6,7 +6,10 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc -p .",
     "start": "node --enable-source-maps dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "demo:crud": "tsx src/drizzle-crud-demo.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +17,15 @@
   "description": "",
   "type": "module",
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.45.1",
     "express": "^5.2.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.0.9",
+    "drizzle-kit": "^0.31.8",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
