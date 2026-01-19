@@ -7,7 +7,7 @@ if (!process.env.DATABASE_URL) {
 }
 
 const sql = neon(process.env.DATABASE_URL);
-export const index = drizzle(sql);
+export const db = drizzle(sql);
 
 // For API parity with other drivers; there is no pool when using HTTP
 export const pool: undefined = undefined;
